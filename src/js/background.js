@@ -1,11 +1,11 @@
-
 chrome.contextMenus.create({
 	title: '设为校验对象', 
 	contexts: ['editable'], 
-	onclick: function(params)
+	onclick: function(params,info)
 	{
-		console.log(params)
-	}
+		alert(JSON.stringify(params))
+		alert(JSON.stringify(info))
+    }
 });
 
 // 监听来自content-script的消息
