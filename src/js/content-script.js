@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function()
     })
 })
 
-
 // 主动发送消息给后台
 function sendMessageToBackground(message) {
 	chrome.runtime.sendMessage(message)
