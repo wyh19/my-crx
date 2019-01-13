@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-	"name": "page-action-demo",
+	"name": "valid-data-tool",
 	"version": "1.0.0",
-	"description": "pageAction演示",
+	"description": "数据校验工具",
 	"icons":
 	{
 		"16": "img/icon.png",
@@ -12,12 +12,23 @@
 	"page_action":
 	{
 		"default_icon": "img/icon.png",
-		"default_title": "我是pageAction",
+		"default_title": "数据校验工具",
 		"default_popup": "popup.html"
 	},
 	"permissions":
 	[
-		"declarativeContent"
+		"notifications",
+		"declarativeContent",
+		"contextMenus",
+		"storage"
+	],
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/jquery-3.3.1.min.js", "js/content-script.js"],
+			"run_at": "document_start"
+		}
 	],
 	"background":
 	{
