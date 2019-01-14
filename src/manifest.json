@@ -9,7 +9,7 @@
 		"48": "img/icon.png",
 		"128": "img/icon.png"
 	},
-	"page_action":
+	"browser_action":
 	{
 		"default_icon": "img/icon.png",
 		"default_title": "数据校验工具",
