@@ -2,7 +2,7 @@ var validRule = /^\d+$/
 
 document.addEventListener('DOMContentLoaded', function()
 {
-    $('#test').change(function(e){
+    $('#participantName').change(function(e){
         var value = e.target.value
         if(!validRule.test(value)){
             sendMessageToBackground('输入不合法')
