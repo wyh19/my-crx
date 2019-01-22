@@ -4,6 +4,7 @@ chrome.contextMenus.create({
     title: '校验',
     contexts: ['editable'],
     onclick: function (params) {
+        console.log(params)
         var value = params.selectionText
         if (!validRule.test(value)) {
             notify('输入不合法')
